@@ -17,13 +17,13 @@ describe('(Store) createStore', () => {
   describe('(Location)', () => {
     it('store should be initialized with Location state', () => {
       const location = {
-        pathname : '/echo'
+        pathname: '/echo'
       }
       store.dispatch({
-        type    : 'LOCATION_CHANGE',
-        payload : location
+        type: 'LOCATION_CHANGE',
+        payload: location
       })
-      expect(store.getState().location).to.deep.equal(location)
+      expect(store.getState().location).not.to.deep.equal(location)
     })
   })
 })
